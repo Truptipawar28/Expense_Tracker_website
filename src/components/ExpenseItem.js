@@ -1,17 +1,23 @@
-function ExpenseItem(){
-    return (<div>
-        <div>
-            <h2>Expense item!</h2>
+import './ExpenseItem.css';
+
+
+function ExpenseItem(props){
+    
+    // const expenseDate = new Date(2021, 2, 28);
+    // const expenseTitle = 'Car Insurance';
+    // const expenseAmount = 294.89;
+    // const LocationOfExpenditure = 'Pune'
+    
+    return (
+        <div className='expense-item'>
+            <div>{props.date.toISOString()}</div>
+            <div className='expense-item__description'>
+                <h2>{props.title}</h2>
+                <h2>{props.location}</h2>
+                <div className='expense-item__price'>${props.amount}</div>
             </div>
-    <div>
-        <h2>Food</h2>
-        <div>Rs 10</div>
-        <h2>Petrol</h2>
-        <div>Rs 100</div>
-        <h2>Movies</h2>
-        <div>Rs 200</div>
-    </div>
-    </div>
+           
+        </div>
     );
 }
 
